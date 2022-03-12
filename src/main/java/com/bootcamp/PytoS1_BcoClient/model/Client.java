@@ -16,7 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Scope(scopeName = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class Client {
     @Id
-    private String id;
+    private int id;
     private String name;
     private String identifier;
     private String type;
