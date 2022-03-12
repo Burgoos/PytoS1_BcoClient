@@ -1,4 +1,4 @@
-package com.bootcamp.PytoS1_BcoClient.controller;
+package com.bootcamp.PytoS1_BcoClient.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
