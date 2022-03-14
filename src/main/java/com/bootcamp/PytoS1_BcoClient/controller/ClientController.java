@@ -36,17 +36,16 @@ public class ClientController {
         Mono<Client> client = clientServiceImpl.findClientById(id);
         return new ResponseEntity<Mono<Client>>(client, client != null ? HttpStatus.OK : HttpStatus.NOT_FOUND);
     }
+
     @PutMapping
     @ResponseStatus(HttpStatus.OK)
     public Mono<Client> update(@RequestBody Client client){
         return clientServiceImpl.updateClient(client);
     }
+
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void delete(@PathVariable("id") Integer id){
         clientServiceImpl.deleteClient(id).subscribe();
     }
-
-
-
 }
